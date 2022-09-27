@@ -11,10 +11,10 @@ class ConditionalImageConsumerMixin(models.AbstractModel):
     _inherit = "image.mixin"
 
     image_1920 = fields.Image(compute="_compute_images", store=False, readonly=True)
-    image_1024 = fields.Image(compute="_compute_images", store=False, readonly=True)
-    image_512 = fields.Image(compute="_compute_images", store=False, readonly=True)
-    image_256 = fields.Image(compute="_compute_images", store=False, readonly=True)
-    image_128 = fields.Image(compute="_compute_images", store=False, readonly=True)
+    image_1024 = fields.Image(compute="_compute_images", store=False, readonly=True, related=None)
+    image_512 = fields.Image(compute="_compute_images", store=False, readonly=True, related=None)
+    image_256 = fields.Image(compute="_compute_images", store=False, readonly=True, related=None)
+    image_128 = fields.Image(compute="_compute_images", store=False, readonly=True, related=None)
 
     def _conditional_image_evaluate_selector(self, conditional_image):
         self.ensure_one()
